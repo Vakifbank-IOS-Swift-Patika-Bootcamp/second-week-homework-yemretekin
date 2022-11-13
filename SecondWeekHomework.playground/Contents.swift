@@ -1,5 +1,7 @@
 import UIKit
 
+//1.Soru
+
 struct Company {
     var companyName: String
     var numberOfEmployee: Int
@@ -27,8 +29,8 @@ struct Employee{
    
     
     
-    func calculateSalary() ->  Int {
-        return employeeAge! * 1000
+    func calculateSalary(employeeType:Double) ->  Double {
+        return Double(employeeAge!) * employeeType * 1000.0
     }
 
     
@@ -36,12 +38,24 @@ struct Employee{
 
 var firstEmployee = Employee(employeeName: "Emre", employeeAge: 26, isMaritalStatus: false)
 firstEmployee.employeeAge
-firstEmployee.calculateSalary()
+var jobType = firstEmployee.employeeType.junior
+firstEmployee.calculateSalary(employeeType: jobType)
 var secondEmployee = Employee(employeeName: "Yunus", employeeAge: 25, isMaritalStatus: true)
 secondEmployee.isMaritalStatus
-secondEmployee.calculateSalary()
+secondEmployee.calculateSalary(employeeType: jobType)
 
 
 
 
+//2.Soru
 
+class Zoo{
+    
+}
+class Animal:Zoo {
+    
+}
+
+class AnimalSitter:Zoo{
+    
+}
