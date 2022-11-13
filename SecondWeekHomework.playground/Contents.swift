@@ -49,10 +49,23 @@ secondEmployee.calculateSalary(employeeType: jobType)
 
 //2.Soru
 
+protocol AnimalVoice{
+    func makeNoise(voice:String) -> String
+}
+
 class Zoo{
     
+    var dailyWaterLimit: Double = 100
+    var zooBudget: Double = 4_000_000.0
+    
 }
-class Animal:Zoo {
+class Animal:Zoo,AnimalVoice {
+    
+    var dailyConsumption : Double = 0.0
+    func makeNoise(voice:String) -> String {
+        return voice
+    }
+    
     
 }
 
